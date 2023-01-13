@@ -1,0 +1,51 @@
+.container{
+    position: fixed;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height:5em;
+}
+.container_items {
+    width: 600px;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 0, 0, .67);
+    border-radius: 0 0 122px 122px;
+
+}
+.item{
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: rgb(0, 174, 255);
+    font-size: 2em;
+    font-weight: 400;
+
+} 
+.item:hover{
+    animation: neonAnim 2.5s alternate-reverse infinite;
+
+}
+
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 22px rgba(0, 123, 255, .7),
+          0 0 52px rgba(0, 123, 255, .7),
+          0 0 112px rgba(0, 123, 255, .7);
+      }
+      to {
+        text-shadow:
+          0 0 17px rgba(0, 123, 255, .7),
+          0 0 32px rgba(0, 123, 255, .7),
+          0 0 72px rgba(0, 123, 255, .7);
+      }
+}
+
+
+
+  
