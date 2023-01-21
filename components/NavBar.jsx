@@ -1,23 +1,18 @@
 import Link from 'next/link'
 import style from '../styles/NavBar.module.css'
-const Links = [{
-  label: 'Home',
-  route: '/'
-}, {
-  label: 'About',
-  route: '/about'
-}
-]
+import Image from 'next/image'
+import Logo from '../public/logoWix.jpg'
+
 export default function NavBar () {
   return (
-    <header className={style.container}>
-      <nav className={style.container_items}>
-        {Links.map(({ label, route }) => (
-          <Link href={route} key={route} className={style.item}>
-            {label}
-          </Link>
-        ))}
-      </nav>
-    </header>
+    <nav className={style.nav}>
+      <Image src={Logo} alt='Logo' className={style.logo} />
+      <ul className={style.ul}>
+        <li className={style.li}><Link href='#' className={style.link}>Pagina Principal</Link></li>
+        <li className={style.li}><Link href='#' className={style.link}>Sobre mi</Link></li>
+        <li className={style.li}><Link href='#' className={style.link}>proyectos</Link></li>
+        <li className={style.li}><Link href='#' className={style.link}>contacto</Link></li>
+      </ul>
+    </nav>
   )
 }

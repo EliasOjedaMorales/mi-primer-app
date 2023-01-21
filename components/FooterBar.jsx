@@ -9,12 +9,13 @@ const insta = 'https://www.instagram.com'
 export default function FooterBar () {
   return (
     <footer className={style.container}>
+      <h3 className={style.developer}>Desarrollado por E.G.O.M.</h3>
       <nav className={style.container_items}>
         <Link href={github} className={style.items}>
           <Unicons.UilGithubAlt size='50' color='rgba(55%, 15%, 63%)' />
         </Link>
         <Link href={linkedin} className={style.items}>
-          <Unicons.UilLinkedinAlt size='50' color='rgba(55%, 15%, 63%)' />
+          <Unicons.UilLinkedinAlt size='50' color='#0A66C2' />
         </Link>
         <Link href={insta} className={style.items}>
           <Unicons.UilInstagram size='50' color='rgba(55%, 15%, 63%)' />

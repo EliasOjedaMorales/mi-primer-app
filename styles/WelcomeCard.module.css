@@ -1,0 +1,46 @@
+.container{
+    display:flex;
+    justify-content:space-evenly;
+    width: 100%;
+    color:#feffc7;
+    /* padding-top: 10rem; */
+}
+.words{
+    display: grid;
+    grid-template-rows:max-content;
+    justify-items: center;
+} 
+.wordWelcome{
+    letter-spacing: 5px;
+    font-size: 1.3rem;
+}
+.wordName{
+    color:transparent;
+    letter-spacing: 8px;
+    background: linear-gradient( rgb(255, 255, 0), rgb(85, 89, 108));
+    background-clip: text ;
+}
+.wordName span{
+    font-size: 1.5em;
+    animation: neonAnim 10s linear infinite;
+    
+}
+.wordWork{
+    letter-spacing: 10px;
+
+}
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 22px rgba(255, 255, 0, .6),
+          0 0 52px rgba(255, 255, 0, .6),
+          0 0 112px rgba(255, 255, 0, .6);
+      }
+      to {
+        text-shadow:
+          0 0 17px rgba(255, 255, 0, .6),
+          0 0 32px rgba(255, 255, 0, .6),
+          0 0 72px rgba(255, 255, 0, .6);
+      }
+}
+
