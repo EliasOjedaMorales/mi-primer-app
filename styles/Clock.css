@@ -1,0 +1,31 @@
+/* Estilos generales para el reloj */
+.clock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+  }
+
+  /* Estilos para las luces de neón */
+  .digits{
+    font-size: 3rem;
+  }
+  .neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6, 0 0 150px #00e6e6;
+
+  }
+  
+  /* Estilos para los dígitos de hora */
+  .digit {
+    font-weight: bold;
+  }
+  
+  /* Estilos para el día de la semana, la fecha y el mes */
+  .currentDate{
+    font-size: 2rem;
+  }
+  .weekday{
+    letter-spacing: 0.25rem;
+  }
+  

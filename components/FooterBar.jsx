@@ -1,27 +1,25 @@
-import Link from 'next/link'
+import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import style from '../styles/FooterBar.module.css'
-import * as Unicons from '@iconscout/react-unicons'
+import Link from 'next/link'
+import Image from 'next/image'
+// import AerisLogo from '../public/ElCosoDeClima.png'
+import EGOM from '../public/logoWix.jpg'
 
-const linkedin = 'https://www.linkedin.com/in/elias-gabriel-ojeda-morales/'
-const github = 'https://www.github.com'
-const insta = 'https://www.instagram.com'
+const FooterBar = () => (
+  <footer className={style.footer}>
+    <div className={style.footer_egom}>
+      <Image src={EGOM} alt='logo EGOM' width='50' height='50' className={style.egom} />
+    </div>
+    <div className={style.footer__links}>
+      <Link href='https://instagram.com/' className={style.link}><FaInstagram className={style.insta} /></Link>
+      <Link href='https://github.com/' className={style.link}><FaGithub className={style.git} /></Link>        <Link href='mailto:gabriel4081@outlook.es' className={style.link}><FaEnvelope className={style.mail} /></Link>
+      <Link href='https://linkedin.com/' className={style.link}><FaLinkedin className={style.linkedin} /></Link>
+    </div>
+    <div className={style.footer__powered}>
+      <p>Powered by <Link href='https://aerisweather.com' className={style.powLink}>AerisWeather</Link></p>
+      {/* <Link href='https://aerisweather.com'><Image src={AerisLogo} alt='Logo de AerisWeather' width='50' height='50' className={style.Image} /></Link> */}
+    </div>
+  </footer>
+)
 
-export default function FooterBar () {
-  return (
-    <footer className={style.container}>
-      <h3 className={style.developer}>Desarrollado por E.G.O.M.</h3>
-      <nav className={style.container_items}>
-        <Link href={github} className={style.items}>
-          <Unicons.UilGithubAlt size='50' color='rgba(55%, 15%, 63%)' />
-        </Link>
-        <Link href={linkedin} className={style.items}>
-          <Unicons.UilLinkedinAlt size='50' color='#0A66C2' />
-        </Link>
-        <Link href={insta} className={style.items}>
-          <Unicons.UilInstagram size='50' color='rgba(55%, 15%, 63%)' />
-        </Link>
-      </nav>
-      <h3 className={style.iconsBy}>React Unicons by <a href='https://iconscout.com/' className={style.iconsByL}>Iconscout</a></h3>
-    </footer>
-  )
-}
+export default FooterBar

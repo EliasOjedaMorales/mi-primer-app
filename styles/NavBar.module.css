@@ -1,40 +1,18 @@
-.ul{
-    list-style:none;
+.nav{
+    overflow: hidden;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 3fr;
-    align-items: center;
-    justify-items:center;
+    width: 25vw;
+    border-top: 1px solid rgb(16, 90, 119);
 
 }
+
 .link{
     text-decoration: none;
     color: #fff;
-    padding: 1.5rem;
+    padding:1.5em ;
     font-weight: bold;
     transition: all .5s ease;
-    border-bottom-right-radius: 30%;
-    border-top-left-radius: 30%;
-}
-
-.nav{
-    background-color: #242B36;
-    overflow: hidden;
-    border-bottom-right-radius: 5em;
-    border-top-right-radius: 6em;
-    position: fixed;
-    top: 20%;
-    left: 0;
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-rows: 1fr 3.6667fr; 
-    justify-items: center;
-}
-
-.logo {
-    width: 120px;
-    height:auto;
-
+    width: 100%;
 }
 
 .link:hover{

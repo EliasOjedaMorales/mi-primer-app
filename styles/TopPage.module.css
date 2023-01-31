@@ -1,0 +1,101 @@
+/* Este el contenedor de todo */
+.container{
+    transition: all .5s ease;
+}
+/*Este es conetenedor de los componentes excepto el boton */
+.header{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:'logo' 
+                        'clock' 
+                        'navBar' 
+                        'weather' ;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: max-content;
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(40, 68, 90);
+}
+/* Estos son los componentes del menu */
+.logo{
+    grid-area: 'logo';
+    width: 120px;
+    height: auto;
+    border-radius: 100px;
+
+}
+.clock{
+    grid-area: 'clock';
+}
+.navBar{
+    grid-area: 'navBar';
+}
+.weather{
+    grid-area: 'weather';
+}
+
+
+/* Estilos del boton */
+.button{
+    z-index: 1000;
+    height: 40px;
+    position: fixed;
+    width: 6vw;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(56, 80, 100) ;
+    background-color: rgb(40, 68, 90);
+    color: #fff;
+    transition: all .5s linear;
+    letter-spacing: 5px;
+    border-bottom-right-radius: 14px;
+}
+
+.active {
+    filter:invert(10%);
+    width: 6vw;
+    top: 0;
+    /* left: 9.4vw; */
+}
+.active:hover, .button:hover {
+    background-color: rgb(21, 72, 110);
+
+}
+
+
+/* Estos estilos son para desaparece/aparecer el menu  */
+#menu_closed{
+    animation: desaparece .5s ease-out forwards;
+}
+#menu_open{
+    animation: aparece .5s ease-in forwards;
+}
+
+ @keyframes desaparece {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    
+ }
+
+ @keyframes aparece {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+ }

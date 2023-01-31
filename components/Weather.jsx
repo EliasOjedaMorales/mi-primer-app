@@ -1,11 +1,15 @@
 'use client'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Loading from './Loader'
+import '../styles/Weather.css'
 
 function Weather () {
   const [weather, setWeather] = useState()
   const ClientId = 'wDj177TVi13lw9fVQT07a'
   const ClientSecret = 'U5b0ps8Ij2D9q6FXoXb06tO1xNXs58ygf2CZkrJs'
+  // const defaultLatitude = -34.62844450403586
+  // const defaultLongitude = -58.39174728796408
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -22,16 +26,16 @@ function Weather () {
   }, [])
 
   return (
-    <div>
+    <div className='container'>
       {weather
         ? (
-          <div>
-            <p>Temperatura: {weather.tempC}°C</p>
-            <p>Clima: {weather.weather}</p>
+          <div className='containerData'>
+            <p className='data temperatura'>{weather.tempC}°C {weather.weather}</p>
+            <p className='data humedad'>Humeda {weather.humidity}%</p>
           </div>
           )
         : (
-          <p>Loading...</p>
+          <Loading className='loader' />
           )}
     </div>
   )
