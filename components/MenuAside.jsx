@@ -1,14 +1,14 @@
 'use client'
-import Weather from './Weather'
+// import Weather from './Weather'
 import Clock from './Clock'
-import style from '../styles/TopPage.module.css'
+import style from '../styles/MenuAside.module.css'
 import NavBar from './NavBar'
 import Image from 'next/image'
 import EGOM from '../public/logoWix.jpg'
 import { useState } from 'react'
 
 export default function TopPage () {
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const buttonStyle = !isMenuOpen ? 'Menú' : 'Cerrar'
 
   return (
@@ -18,7 +18,7 @@ export default function TopPage () {
         <Image src={EGOM} alt='Logo personal' className={style.logo} />
         <Clock className={style.clock} />
         <NavBar className={style.navBar} />
-        <Weather className={style.weather} />
+        {/* <Weather className={style.weather} /> */}
       </div>
     </header>
   )

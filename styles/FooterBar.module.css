@@ -72,7 +72,7 @@
   .egom {
     width: 70px;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
   }
 

@@ -1,0 +1,28 @@
+.button{
+    z-index: 1000;
+    height: auto;
+    width: 5vw;
+    position: fixed;
+    bottom: 6em;
+    right: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    transition: all .5s linear;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.upArrow{
+    width: inherit;
+    height: inherit;
+    color:rgb(112, 149, 197);
+    transition: all .5s ease;
+
+}
+
+.upArrow:hover{
+    color: rgb(156, 197, 221);
+}

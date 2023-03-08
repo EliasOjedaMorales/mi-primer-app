@@ -1,10 +1,12 @@
 import '../styles/normalize.css'
-import { Roboto } from '@next/font/google'
+import { Montserrat_Alternates } from '@next/font/google'
 import FooterBar from '../components/FooterBar'
 import Menu from '../components/MenuAside'
+import ToTopButton from '../components/ToTopButton'
 
-const fuenteRoboto = Roboto({
-  weight: ['100', '300', '500', '700']
+const fuenteRoboto = Montserrat_Alternates({
+  weight: ['100', '300', '500', '700'],
+  subsets: ['latin1', 'cyrillic']
 })
 
 export default function RootLayout ({ children }) {
@@ -14,6 +16,7 @@ export default function RootLayout ({ children }) {
       <body className={fuenteRoboto.className}>
         <Menu />
         {children}
+        <ToTopButton />
         <FooterBar />
       </body>
     </html>

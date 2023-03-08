@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow: hidden;
+    gap: 30px;
+}
+
+.title{
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6, 0 0 150px #00e6e6;
+}
+
+.description{
+    display: flex;
+    width: 80vw;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.words{
+    color: rgb(220, 229, 236);
+    font-size: 1.5em ;
+    font-weight: 400;
+    width:60vw ;
+}
+.image{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+  

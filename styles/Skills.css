@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    flex: 2 0 auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    font-size: 35px;
+    color: rgb(230, 238, 255);
+}

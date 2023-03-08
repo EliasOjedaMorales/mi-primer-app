@@ -1,6 +1,7 @@
 /* Este el contenedor de todo */
 .container{
     transition: all .5s ease;
+    z-index: 10000;
 }
 /*Este es conetenedor de los componentes excepto el boton */
 .header{
@@ -42,7 +43,7 @@
 
 /* Estilos del boton */
 .button{
-    z-index: 1000;
+    z-index: 100000;
     height: 40px;
     position: fixed;
     width: 6vw;
@@ -66,16 +67,17 @@
 }
 .active:hover, .button:hover {
     background-color: rgb(21, 72, 110);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6, 0 0 150px #00e6e6;
 
 }
 
 
 /* Estos estilos son para desaparece/aparecer el menu  */
 #menu_closed{
-    animation: desaparece .5s ease-out forwards;
+    animation: desaparece .5s ease-in forwards;
 }
 #menu_open{
-    animation: aparece .5s ease-in forwards;
+    animation: aparece .5s ease-out forwards;
 }
 
  @keyframes desaparece {

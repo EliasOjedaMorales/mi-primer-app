@@ -3,12 +3,18 @@
     justify-content:space-evenly;
     width: 100%;
     color:#feffc7;
-    /* padding-top: 10rem; */
+    height: 80vh;
+    background-image: url('https://fondosmil.com/fondo/62847.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .words{
-    display: grid;
-    grid-template-rows:max-content;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: brightness(1);
+
 } 
 .wordWelcome{
     letter-spacing: 5px;
@@ -29,6 +35,7 @@
     letter-spacing: 10px;
 
 }
+
 @keyframes neonAnim {
     from {
         text-shadow:
